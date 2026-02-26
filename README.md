@@ -1,2 +1,6 @@
-# uBOEnhanced
-An Advanced Ad Blocker more than the uBO Lite version
+Verson 26
+
+this is a fork of uVO Lite I have improved config.js with more complex logic for ad blocking more comprehensive And detailed notes. for each new addition detailing what each setting does in the configuration file. 
+
+
+I also added in. a few extra permissions in the manifest.json file I also had to strip out the key for the extension. I also had to strip out the update URL. and this Custom Modified Fork of the extension has to be loaded as unpacked. And not have the key associate with UVO. and not have the update URL for Google and cannot be submitted to the Chrome web store The reason why? The ad blocker is being targeted so easily by YouTube. It's because that unique ID, which is identified by the key that's in the manifestation file. Is in a blacklist that Google holds for all. extension That relate to ad blocking. I also had to strip out some fingerprinting identifiers. From the Manifest file as well. So we can go on. undetected If you add in the key to the extension from the web store. And the update URL for Chrome or the Google web store. and add in the fingerprint identifiers that Google is actually looking for the ad blocker will be detected. In the future so the ad blocker extension. can never be submitted to the web store. Otherwise, it's a never-ending battle between us. and Google
