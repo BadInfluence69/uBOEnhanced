@@ -5,8 +5,9 @@ import {
     webextFlavor,
 } from './ext.js';
 
+
 // Increment this whenever you change the config shape
-const CURRENT_CONFIG_VERSION = '26';
+const CURRENT_CONFIG_VERSION = '82';
 
 export const rulesetConfig = {
     version: CURRENT_CONFIG_VERSION,
@@ -34,7 +35,7 @@ export const rulesetConfig = {
             minDurationMs: 300, 
 
             // Avoid jitter: ignore repeated detections within this window
-            debounceMs: 1, 
+            debounceMs: 300, 
             // Optional: only trigger within these video duration ranges, etc.
             maxSkipPerVideo: 1000, 
         },
@@ -221,3 +222,10 @@ async function internalSave() {
     sessionWrite('rulesetConfig', rulesetConfig);
     return localWrite('rulesetConfig', rulesetConfig);
 }
+
+// Common ad containers often use specific classes or IDs.
+const TARGET_SELECTORS = [
+  '.ad-container', 
+  '.adsbygoogle', 
+  '[id^="iframe"]'
+  ];
